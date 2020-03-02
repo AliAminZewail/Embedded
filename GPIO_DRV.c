@@ -662,11 +662,11 @@ void GPIO_WRITE_PIN(GPIOPortID_t port, GPIOPinID_t pin, uint8 value)
     case PA:
         if (value == 1)
         {
-            (*((volatile uint32*) (0x40004000 + (1 << (pin + 2))))) = 0XFF;
+            (*((volatile uint32*) (0x40058000 + (1 << (pin + 2))))) = 0XFF;
         }
         else
         {
-            (*((volatile uint32*) (0x40004000 + (1 << (pin + 2))))) = 0X00;
+            (*((volatile uint32*) (0x40058000 + (1 << (pin + 2))))) = 0X00;
         }
         break;
 
@@ -674,22 +674,22 @@ void GPIO_WRITE_PIN(GPIOPortID_t port, GPIOPinID_t pin, uint8 value)
         if (value == 1)
         {
 
-            (*((volatile uint32*) (0x40005000 + (1 << (pin + 2))))) = 0xFF;
+            (*((volatile uint32*) (0x40059000 + (1 << (pin + 2))))) = 0xFF;
         }
         else
         {
-            (*((volatile uint32*) (0x40005000 + (1 << (pin + 2))))) = 0X00;
+            (*((volatile uint32*) (0x40059000 + (1 << (pin + 2))))) = 0X00;
         }
         break;
 
     case PC:
         if (value == 1)
         {
-            (*((volatile uint32*) (0x40006000 + (1 << (pin + 2))))) = 0xFF;
+            (*((volatile uint32*) (0x4005A000 + (1 << (pin + 2))))) = 0xFF;
         }
         else
         {
-            (*((volatile uint32*) (0x40006000 + (1 << (pin + 2))))) = 0x00;
+            (*((volatile uint32*) (0x4005A000 + (1 << (pin + 2))))) = 0x00;
         }
         break;
 
@@ -697,33 +697,33 @@ void GPIO_WRITE_PIN(GPIOPortID_t port, GPIOPinID_t pin, uint8 value)
         if (value == 1)
         {
 
-            (*((volatile uint32*) (0x40007000 + (1 << (pin + 2))))) = 0XFF;
+            (*((volatile uint32*) (0x4005B000 + (1 << (pin + 2))))) = 0XFF;
 
         }
         else
         {
-            (*((volatile uint32*) (0x40007000 + (1 << (pin + 2))))) = 0X00;
+            (*((volatile uint32*) (0x4005B000 + (1 << (pin + 2))))) = 0X00;
         }
         break;
 
     case PE:
         if (value == 1)
         {
-            (*((volatile uint32*) (0x40024000 + (1 << (pin + 2))))) = 0XFF;
+            (*((volatile uint32*) (0x4005C000 + (1 << (pin + 2))))) = 0XFF;
         }
         else
         {
-            (*((volatile uint32*) (0x40024000 + (1 << (pin + 2))))) = 0X00;
+            (*((volatile uint32*) (0x4005C000 + (1 << (pin + 2))))) = 0X00;
         }
         break;
     case PF:
         if (value == 1)
         {
-            (*((volatile uint32*) (0x40025000 + (1 << (pin + 2))))) = 0XFF;
+            (*((volatile uint32*) (0x4005D000 + (1 << (pin + 2))))) = 0XFF;
         }
         else
         {
-            (*((volatile uint32*) (0x40025000 + (1 << (pin + 2))))) = 0X00;
+            (*((volatile uint32*) (0x4005D000 + (1 << (pin + 2))))) = 0X00;
         }
         break;
 

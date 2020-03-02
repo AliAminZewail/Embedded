@@ -20,13 +20,10 @@ int main(void)
     while (1)
     {
         //red
-        GPIO_WRITE_PORT(PF, 0b00000010);
+        GPIO_WRITE_PIN(PF, PIN1, 1);
         _delay_ms(1000);
         //blue
-        GPIO_WRITE_PORT(PF, 0b00000100);
-        _delay_ms(1000);
-        //green
-        GPIO_WRITE_PORT(PF, 0b00001000);
+        GPIO_WRITE_PIN(PF, PIN1, 0);
         _delay_ms(1000);
 
     }
